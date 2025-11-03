@@ -1,0 +1,551 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="730b0933-9ebd-4e59-ab05-89ba260850d6" name="변경" comment="test #217: category api test 테스트/문서" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view />
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="haeda0225 &lt;haeda0225@gmail.com&gt;" />
+      </list>
+    </option>
+    <option name="PUSH_AUTO_UPDATE" value="true" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="feature/#174-ai-agent" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;haeda0225&quot;
+  }
+}</component>
+  <component name="GithubDefaultAccount">
+    <option name="defaultAccountId" value="894bd3f9-5723-468e-84ca-209f680be29b" />
+  </component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Profect-4th-IRUM/ai-service",
+    "accountId": "894bd3f9-5723-468e-84ca-209f680be29b"
+  },
+  "recentNewPullRequestHead": {
+    "server": {
+      "useHttp": false,
+      "host": "github.com",
+      "port": null,
+      "suffix": null
+    },
+    "owner": "Profect-4th-IRUM",
+    "repository": "mvp-server"
+  }
+}]]></component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="34BFmQr89MzHKaN8cdgQQwy9TN3" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "Gradle.CategoryControllerTest.createCategory.executor": "Run",
+    "Gradle.CategoryControllerTest.createCategory_WithNullName_Returns400.executor": "Run",
+    "Gradle.CategoryControllerTest.createCategory_WithoutName_Returns400.executor": "Run",
+    "Gradle.CategoryControllerTest.createRootCategory.executor": "Run",
+    "Gradle.CategoryControllerTest.deleteCategory.executor": "Run",
+    "Gradle.CategoryControllerTest.executor": "Run",
+    "Gradle.CategoryControllerTest.getAllRootCategories.executor": "Run",
+    "Gradle.CategoryControllerTest.getCategoryById.executor": "Run",
+    "Gradle.CategoryControllerTest.getCategoryTree.executor": "Run",
+    "Gradle.CategoryControllerTest.getSubCategories.executor": "Run",
+    "Gradle.CategoryControllerTest.updateCategory.executor": "Run",
+    "Gradle.mvp-server [:com.irum.come2us.Come2usApplication.main()].executor": "Run",
+    "Gradle.소스 다운로드.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "develop",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/goorm/IdeaProjects/ai-service",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/com/irum/come2us/domain" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.irum.come2us.global.presentation.advice.exception.errorcode" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Gradle.CategoryControllerTest">
+    <configuration name="CategoryControllerTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.irum.come2us.domain.category.CategoryControllerTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="CategoryControllerTest.createCategory_WithNullName_Returns400" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.irum.come2us.domain.category.CategoryControllerTest.createCategory_WithNullName_Returns400&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="CategoryControllerTest.createCategory_WithoutName_Returns400" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.irum.come2us.domain.category.CategoryControllerTest.createCategory_WithoutName_Returns400&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="CategoryControllerTest.createRootCategory" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.irum.come2us.domain.category.CategoryControllerTest.createRootCategory&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="CategoryControllerTest.deleteCategory" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.irum.come2us.domain.category.CategoryControllerTest.deleteCategory&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.CategoryControllerTest" />
+        <item itemvalue="Gradle.CategoryControllerTest.createCategory_WithNullName_Returns400" />
+        <item itemvalue="Gradle.CategoryControllerTest.createRootCategory" />
+        <item itemvalue="Gradle.CategoryControllerTest.createCategory_WithoutName_Returns400" />
+        <item itemvalue="Gradle.CategoryControllerTest.deleteCategory" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="디폴트 작업">
+      <changelist id="730b0933-9ebd-4e59-ab05-89ba260850d6" name="변경" comment="" />
+      <created>1760679218237</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1760679218237</updated>
+    </task>
+    <task id="LOCAL-00001" summary="[feture] #18 : category 도메인 추가">
+      <option name="closed" value="true" />
+      <created>1760689439585</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1760689439585</updated>
+    </task>
+    <task id="LOCAL-00002" summary="[feture] #18 : category 도메인 추가">
+      <option name="closed" value="true" />
+      <created>1760701378663</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1760701378663</updated>
+    </task>
+    <task id="LOCAL-00003" summary="[feture] #18 : category 도메인 추가">
+      <option name="closed" value="true" />
+      <created>1760701412037</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1760701412037</updated>
+    </task>
+    <task id="LOCAL-00004" summary="[feture] #18 : category 도메인 추가">
+      <option name="closed" value="true" />
+      <created>1760701520779</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1760701520779</updated>
+    </task>
+    <task id="LOCAL-00005" summary="[feture] #18 : category 도메인 추가">
+      <option name="closed" value="true" />
+      <created>1760701533696</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1760701533696</updated>
+    </task>
+    <task id="LOCAL-00006" summary="[feture] #18 : category 도메인 추가">
+      <option name="closed" value="true" />
+      <created>1760701785569</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1760701785569</updated>
+    </task>
+    <task id="LOCAL-00007" summary="[feature] #18 : Category repository, service, controller 추가">
+      <option name="closed" value="true" />
+      <created>1760879351820</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1760879351820</updated>
+    </task>
+    <task id="LOCAL-00008" summary="[feature] #18 : Category entity, repository, service, controller 수정">
+      <option name="closed" value="true" />
+      <created>1760880218893</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1760880218893</updated>
+    </task>
+    <task id="LOCAL-00009" summary="[feature] #18 : Category entity, repository, service, controller 수정">
+      <option name="closed" value="true" />
+      <created>1760880675694</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1760880675694</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Merge remote-tracking branch 'origin/feature/#18-category-domain' into feature/#18-category-domain">
+      <option name="closed" value="true" />
+      <created>1760880838518</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1760880838518</updated>
+    </task>
+    <task id="LOCAL-00011" summary="feature #18: category 도메인 개발">
+      <option name="closed" value="true" />
+      <created>1760942469301</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1760942469301</updated>
+    </task>
+    <task id="LOCAL-00012" summary="feature #18: category 도메인 개발 ver2">
+      <option name="closed" value="true" />
+      <created>1761012704864</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1761012704864</updated>
+    </task>
+    <task id="LOCAL-00013" summary="feature #18: category 도메인 개발 ver3 (createSubCategory에서 부모-자식 관계 양방향 동기화)">
+      <option name="closed" value="true" />
+      <created>1761018593512</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1761018593512</updated>
+    </task>
+    <task id="LOCAL-00014" summary="feature #116: category crud 개발">
+      <option name="closed" value="true" />
+      <created>1761110647250</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1761110647250</updated>
+    </task>
+    <task id="LOCAL-00015" summary="feature #116: category crud 개발">
+      <option name="closed" value="true" />
+      <created>1761141009566</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1761141009566</updated>
+    </task>
+    <task id="LOCAL-00016" summary="feature #116: category crud 개발_1차 pr 리뷰 수정반영">
+      <option name="closed" value="true" />
+      <created>1761180612175</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1761180612175</updated>
+    </task>
+    <task id="LOCAL-00017" summary="feature #116: category crud 개발_1차 pr 리뷰 수정반영">
+      <option name="closed" value="true" />
+      <created>1761180644977</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1761180644977</updated>
+    </task>
+    <task id="LOCAL-00018" summary="feature #168: ai domain 개발">
+      <option name="closed" value="true" />
+      <created>1761205483976</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1761205483976</updated>
+    </task>
+    <task id="LOCAL-00019" summary="feature #168: ai domain - aiId UUID, question/answer @Lob 적용">
+      <option name="closed" value="true" />
+      <created>1761278432495</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1761278432495</updated>
+    </task>
+    <task id="LOCAL-00020" summary="feature #168: ai domain - 엔티티, 레포 수정">
+      <option name="closed" value="true" />
+      <created>1761281525739</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1761281525739</updated>
+    </task>
+    <task id="LOCAL-00021" summary="feature #174: ai agent">
+      <option name="closed" value="true" />
+      <created>1761286180086</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1761286180086</updated>
+    </task>
+    <task id="LOCAL-00022" summary="feature #174: ai agent">
+      <option name="closed" value="true" />
+      <created>1761292906598</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1761292906598</updated>
+    </task>
+    <task id="LOCAL-00023" summary="feature #174: ai agent">
+      <option name="closed" value="true" />
+      <created>1761295784150</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1761295784150</updated>
+    </task>
+    <task id="LOCAL-00024" summary="test #217: CategoryController">
+      <option name="closed" value="true" />
+      <created>1761554539422</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1761554539422</updated>
+    </task>
+    <task id="LOCAL-00025" summary="test #217: CategoryController">
+      <option name="closed" value="true" />
+      <created>1761566509412</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1761566509412</updated>
+    </task>
+    <task id="LOCAL-00026" summary="test #217: category api test">
+      <option name="closed" value="true" />
+      <created>1761566706185</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1761566706185</updated>
+    </task>
+    <task id="LOCAL-00027" summary="test #217: category api test (api 응답 구조 수정)">
+      <option name="closed" value="true" />
+      <created>1761623919669</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1761623919669</updated>
+    </task>
+    <task id="LOCAL-00028" summary="test #217: category api test (api 응답 구조 수정) 수정">
+      <option name="closed" value="true" />
+      <created>1761625174835</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1761625174835</updated>
+    </task>
+    <task id="LOCAL-00029" summary="test #217: category api test (api 응답 구조 수정) 수정">
+      <option name="closed" value="true" />
+      <created>1761625523635</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1761625523635</updated>
+    </task>
+    <task id="LOCAL-00030" summary="test #217: category api test 테스트/문서">
+      <option name="closed" value="true" />
+      <created>1761629657506</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1761629657506</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="[feature] #18 : category 도메인 추가" />
+    <MESSAGE value="[feture] #18 : category 도메인 추가" />
+    <MESSAGE value="[feature] #18 : Category repository, service, controller 추가" />
+    <MESSAGE value="[feature] #18 : Category entity, repository, service, controller 수정" />
+    <MESSAGE value="Merge remote-tracking branch 'origin/feature/#18-category-domain' into feature/#18-category-domain" />
+    <MESSAGE value="feature #18: category 도메인 개발" />
+    <MESSAGE value="feature #18: category 도메인 개발 ver2" />
+    <MESSAGE value="feature #18: category 도메인 개발 ver3 (createSubCategory에서 부모-자식 관계 양방향 동기화)" />
+    <MESSAGE value="feature #116: category crud 개발" />
+    <MESSAGE value="feature #116: category crud 개발_1차 pr 리뷰 수정반영 + CategoryErrorCode 추가" />
+    <MESSAGE value="feature #116: category crud 개발_1차 pr 리뷰 수정반영" />
+    <MESSAGE value="feature #168: ai domain 개발" />
+    <MESSAGE value="feature #168: ai domain - aiId UUID, question/answer @Lob 적용" />
+    <MESSAGE value="feature #168: ai domain - 엔티티, 레포 수정" />
+    <MESSAGE value="feature #174: ai agent" />
+    <MESSAGE value="Merge remote-tracking branch 'origin/feature/#188-ai-agent' into feature/#188-ai-agent&#10;&#10;# Conflicts:&#10;#&#9;src/main/java/com/irum/come2us/domain/ai/application/service/AiService.java" />
+    <MESSAGE value="test #217: CategoryController" />
+    <MESSAGE value="Merge remote-tracking branch 'origin/test/#217-category-api' into test/#217-category-api&#10;&#10;# Conflicts:&#10;#&#9;src/test/java/com/irum/come2us/domain/category/CategoryControllerTest.java" />
+    <MESSAGE value="test #217: category api test" />
+    <MESSAGE value="test #217: category api test (api 응답 구조 수정) 수정" />
+    <MESSAGE value="test #217: category api test (api 응답 구조 수정)" />
+    <MESSAGE value="test #217: category api test 테스트/문서" />
+    <option name="LAST_COMMIT_MESSAGE" value="test #217: category api test 테스트/문서" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/irum/come2us/domain/category/CategoryControllerTest.java</url>
+          <line>37</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
