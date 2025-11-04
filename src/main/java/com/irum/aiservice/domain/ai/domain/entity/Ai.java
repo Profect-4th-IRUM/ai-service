@@ -1,4 +1,4 @@
-package com.irum.come2us.domain.ai.domain.entity;
+package com.irum.aiservice.domain.ai.domain.entity;
 
 // import com.irum.come2us.domain.product.domain.entity.Product;
 import jakarta.persistence.*;
@@ -47,5 +47,9 @@ public class Ai extends com.irum.come2us.global.domain.BaseEntity {
     // 정적 팩토리 매서드
     public static Ai create(String question, String answer, UUID product) {
         return Ai.builder().question(question).answer(answer).product(product).build();
+    }
+
+    public String getGeneratedDescription() {
+        return this.answer;
     }
 }

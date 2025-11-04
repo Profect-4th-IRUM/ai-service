@@ -1,12 +1,12 @@
+server:
+  port: 8081
+
 spring:
   application:
     name: aiservice
-  profiles:
-    active: local
-    include:
-      - redis
-      - toss
-logback:
-  log-path: ./logs
 
+gemini:
+  api:
+    url: ${GEMINI_API_URL}
+    key: ${GEMINI_API_KEY}
 
