@@ -1,4 +1,4 @@
-package com.irum.come2us.global.constants;
+package com.irum.aiservice.global.constants;
 
 public final class FileStorageConstants {
 

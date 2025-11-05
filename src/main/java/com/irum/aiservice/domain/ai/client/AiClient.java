@@ -1,18 +1,21 @@
 package com.irum.aiservice.domain.ai.client;
 
+import com.irum.aiservice.global.infrastructure.properties.GeminiApiPropertyConfig;
+import java.util.Optional;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.http.MediaType;
+import org.springframework.http.*;
 import org.springframework.stereotype.Component;
-import org.springframework.web.reactive.function.client.WebClient;
+import org.springframework.web.client.RestTemplate;
 
 @Slf4j
 @Component
 @RequiredArgsConstructor
 public class AiClient {
 
-    private final WebClient webClient;
+    private final GeminiApiPropertyConfig config;
+    private final RestTemplate restTemplate = new RestTemplate();
 
     @Value("${gemini.api.url}")
     private String apiUrl;
@@ -24,25 +27,24 @@ public class AiClient {
         try {
             AiRequest request = new AiRequest(prompt);
 
-            AiResponse response =
-                    webClient
-                            .post()
-                            .uri(apiUrl + "?key=" + apiKey)
-                            .contentType(MediaType.APPLICATION_JSON)
-                            .bodyValue(request)
-                            .retrieve()
-                            .bodyToMono(AiResponse.class)
-                            .block();
+            HttpHeaders headers = new HttpHeaders();
+            headers.setContentType(MediaType.APPLICATION_JSON);
 
-            if (response != null
-                    && response.candidates() != null
-                    && !response.candidates().isEmpty()
-                    && response.candidates().get(0).content() != null
-                    && !response.candidates().get(0).content().parts().isEmpty()) {
-                return response.candidates().get(0).content().parts().get(0).text();
-            }
+            HttpEntity<AiRequest> entity = new HttpEntity<>(request, headers);
 
-            return "AI 응답을 생성하지 못했습니다.";
+            ResponseEntity<AiResponse> response =
+                    restTemplate.exchange(
+                            apiUrl + "?key=" + apiKey, HttpMethod.POST, entity, AiResponse.class);
+
+            return Optional.ofNullable(response.getBody())
+                    .map(AiResponse::candidates)
+                    .filter(candidates -> !candidates.isEmpty())
+                    .map(candidates -> candidates.get(0))
+                    .map(Candidate::content)
+                    .map(Content::parts)
+                    .flatMap(parts -> parts.stream().findFirst())
+                    .map(Part::text)
+                    .orElse("AI 응답을 생성하지 못했습니다.");
 
         } catch (Exception e) {
             log.error("Ai API 호출 실패: {}", e.getMessage(), e);
