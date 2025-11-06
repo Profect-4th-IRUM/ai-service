@@ -34,6 +34,6 @@ public class AiController {
         log.info("[AI 상품설명 요청] productId={}, productName={}", productId, productName);
         Ai result = aiService.generateProductDescription(productId, productName, categoryId, tags);
 
-        return ResponseEntity.ok(result.getGeneratedDescription());
+        return ResponseEntity.ok(result.getAnswer());
     }
 }

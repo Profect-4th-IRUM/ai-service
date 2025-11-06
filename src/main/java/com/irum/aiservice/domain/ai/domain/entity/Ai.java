@@ -29,8 +29,6 @@ public class Ai extends BaseEntity {
     @Column(nullable = false)
     private String answer;
 
-    //    @ManyToOne(fetch = FetchType.LAZY)
-    //    @JoinColumn(name = "product_id", nullable = false)
     @Column(name = "product_id", nullable = false)
     private UUID productId;
 
@@ -51,7 +49,7 @@ public class Ai extends BaseEntity {
         return Ai.builder().question(question).answer(answer).productId(productId).build();
     }
 
-    public String getGeneratedDescription() {
+    public String getAnswer() {
         return this.answer;
     }
 }

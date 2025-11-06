@@ -1,37 +1,34 @@
 package com.irum.aiservice.domain.ai.client;
 
-import com.irum.aiservice.global.infrastructure.properties.GeminiApiPropertyConfig;
+import com.irum.aiservice.domain.ai.property.GeminiApiProperty;
+import com.irum.aiservice.global.presentation.advice.exception.CommonException;
+import com.irum.aiservice.global.presentation.advice.exception.errorcode.AiErrorCode;
 import java.util.Optional;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.*;
 import org.springframework.stereotype.Component;
-import org.springframework.web.client.RestTemplate;
+import org.springframework.web.client.*;
 
 @Slf4j
 @Component
 @RequiredArgsConstructor
 public class AiClient {
 
-    private final GeminiApiPropertyConfig config;
-    private final RestTemplate restTemplate = new RestTemplate();
-
-    @Value("${gemini.api.url}")
-    private String apiUrl;
-
-    @Value("${gemini.api.key}")
-    private String apiKey;
+    private final GeminiApiProperty geminiApiProperty;
+    private final RestTemplate restTemplate;
 
     public String generateText(String prompt) {
+        AiRequest request = new AiRequest(prompt);
+
+        HttpHeaders headers = new HttpHeaders();
+        headers.setContentType(MediaType.APPLICATION_JSON);
+
+        HttpEntity<AiRequest> entity = new HttpEntity<>(request, headers);
+        String apiUrl = geminiApiProperty.getUrl();
+        String apiKey = geminiApiProperty.getKey();
+
         try {
-            AiRequest request = new AiRequest(prompt);
-
-            HttpHeaders headers = new HttpHeaders();
-            headers.setContentType(MediaType.APPLICATION_JSON);
-
-            HttpEntity<AiRequest> entity = new HttpEntity<>(request, headers);
-
             ResponseEntity<AiResponse> response =
                     restTemplate.exchange(
                             apiUrl + "?key=" + apiKey, HttpMethod.POST, entity, AiResponse.class);
@@ -44,11 +41,19 @@ public class AiClient {
                     .map(Content::parts)
                     .flatMap(parts -> parts.stream().findFirst())
                     .map(Part::text)
-                    .orElse("AI 응답을 생성하지 못했습니다.");
+                    .orElseThrow(() -> new CommonException(AiErrorCode.AI_RESPONSE_EMPTY));
+
+        } catch (ResourceAccessException e) {
+            log.error("AI API 호출 시간 초과: {}", e.getMessage(), e);
+            throw new CommonException(AiErrorCode.AI_TIMEOUT);
+
+        } catch (HttpClientErrorException | HttpServerErrorException e) {
+            log.error("AI API 호출 실패 (HTTP 에러): {}", e.getMessage(), e);
+            throw new CommonException(AiErrorCode.AI_API_UNAVAILABLE);
 
         } catch (Exception e) {
-            log.error("Ai API 호출 실패: {}", e.getMessage(), e);
-            return "AI 설명 생성 중 오류가 발생했습니다.";
+            log.error("AI 설명 생성 중 예기치 못한 오류: {}", e.getMessage(), e);
+            throw new CommonException(AiErrorCode.AI_GENERATION_FAILED);
         }
     }
 
