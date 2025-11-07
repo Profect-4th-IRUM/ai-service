@@ -1,7 +1,7 @@
-package com.irum.come2us.global.presentation.advice.exception;
+package com.irum.aiservice.global.presentation.advice.exception;
 
-import com.irum.come2us.global.presentation.advice.exception.errorcode.BaseErrorCode;
-import com.irum.come2us.global.presentation.advice.exception.errorcode.GlobalErrorCode;
+import com.irum.aiservice.global.presentation.advice.exception.errorcode.BaseErrorCode;
+import com.irum.aiservice.global.presentation.advice.exception.errorcode.GlobalErrorCode;
 import com.irum.come2us.global.presentation.advice.response.CommonResponse;
 import lombok.SneakyThrows;
 import org.springframework.http.HttpHeaders;
