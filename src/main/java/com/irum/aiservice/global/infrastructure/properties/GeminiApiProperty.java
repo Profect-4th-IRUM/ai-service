@@ -1,4 +1,4 @@
-package com.irum.aiservice.domain.ai.property;
+package com.irum.aiservice.global.infrastructure.properties;
 
 import lombok.Getter;
 import lombok.Setter;
