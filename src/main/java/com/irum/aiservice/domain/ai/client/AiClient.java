@@ -1,6 +1,7 @@
 package com.irum.aiservice.domain.ai.client;
 
-import com.irum.aiservice.domain.ai.property.GeminiApiProperty;
+import com.irum.aiservice.domain.ai.dto.*;
+import com.irum.aiservice.global.infrastructure.properties.GeminiApiProperty;
 import com.irum.aiservice.global.presentation.advice.exception.CommonException;
 import com.irum.aiservice.global.presentation.advice.exception.errorcode.AiErrorCode;
 import java.util.Optional;
@@ -56,19 +57,4 @@ public class AiClient {
             throw new CommonException(AiErrorCode.AI_GENERATION_FAILED);
         }
     }
-
-    // --- 내부 DTO 클래스 ---
-    record AiRequest(java.util.List<Content> contents) {
-        AiRequest(String text) {
-            this(java.util.List.of(new Content(java.util.List.of(new Part(text)))));
-        }
-    }
-
-    record Content(java.util.List<Part> parts) {}
-
-    record Part(String text) {}
-
-    record AiResponse(java.util.List<Candidate> candidates) {}
-
-    record Candidate(Content content) {}
 }
