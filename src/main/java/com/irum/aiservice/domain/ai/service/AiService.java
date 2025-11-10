@@ -3,8 +3,7 @@ package com.irum.aiservice.domain.ai.service;
 import com.irum.aiservice.domain.ai.client.AiClient;
 import com.irum.aiservice.domain.ai.domain.entity.Ai;
 import com.irum.aiservice.domain.ai.domain.repository.AiRepository;
-import com.irum.aiservice.global.presentation.advice.exception.CommonException;
-import com.irum.aiservice.global.presentation.advice.exception.errorcode.AiErrorCode;
+
 import java.util.UUID;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -25,18 +24,16 @@ public class AiService {
     public Ai generateProductDescription(
             UUID productId, String productName, UUID categoryId, String tags) {
 
+        // TODO: 추후 ProductFeignClient 실제 구현 완료되면, 해당 부분과 다른 점 없도록 검토!
         String categoryPath = productFeignClient.getCategoryPath(categoryId);
 
         log.info("상품 설명 생성 시작 - productId: {}, categoryPath: {}", productId, categoryPath);
         String prompt = buildDetailedPrompt(productName, categoryPath, tags);
 
         String generatedDescription = aiClient.generateText(prompt);
-        if (generatedDescription == null || generatedDescription.equals("AI 설명 생성 중 오류가 발생했습니다.")) {
-            throw new CommonException(AiErrorCode.AI_GENERATION_FAILED);
-        }
 
-        Ai ai = Ai.create(prompt, generatedDescription, productId);
-        return aiRepository.save(ai);
+        Ai aiGeneratedDescription = Ai.create(prompt, generatedDescription, productId);
+        return aiRepository.save(aiGeneratedDescription);
     }
 
     private String buildDetailedPrompt(String productName, String categoryPath, String tags) {
