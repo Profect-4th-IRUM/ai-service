@@ -1,6 +1,7 @@
 package com.irum.aiservice.domain.ai.controller;
 
 import com.irum.aiservice.domain.ai.domain.entity.Ai;
+import com.irum.aiservice.domain.ai.dto.ProductDescriptionRequest;
 import com.irum.aiservice.domain.ai.service.AiService;
 import java.util.UUID;
 import lombok.RequiredArgsConstructor;
@@ -18,14 +19,16 @@ public class AiController {
 
     @PostMapping("/product-description")
     public ResponseEntity<String> generateProductDescription(
-            @RequestParam UUID productId,
-            @RequestParam String productName,
-            @RequestParam UUID categoryId,
-            @RequestParam(required = false) String tags) {
+            @RequestBody ProductDescriptionRequest request) {
 
-        log.info("[AI 상품설명 요청] productId={}, productName={}", productId, productName);
-        Ai result = aiService.generateProductDescription(productId, productName, categoryId, tags);
+        log.info("[AI 상품설명 요청] productId={}, productName={}",
+                request.getProductId(), request.getProductName());
 
+        Ai result = aiService.generateProductDescription(
+                request.getProductId(),
+                request.getProductName(),
+                request.getCategoryId(),
+                request.getTags());
         return ResponseEntity.ok(result.getAnswer());
     }
 }
