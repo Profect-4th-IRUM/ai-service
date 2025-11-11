@@ -1,4 +1,4 @@
-package com.irum.aiservice.global.presentation.advice.response;
+package com.irum.aiservice.global.advice.response;
 
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.core.MethodParameter;

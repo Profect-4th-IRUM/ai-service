@@ -4,7 +4,6 @@ import com.irum.aiservice.domain.ai.domain.entity.Ai;
 import com.irum.aiservice.domain.ai.dto.ProductDescriptionRequest;
 import com.irum.aiservice.domain.ai.dto.ProductDescriptionResponse;
 import com.irum.aiservice.domain.ai.service.AiService;
-import com.irum.aiservice.global.presentation.advice.response.CommonResponse;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
@@ -18,7 +17,7 @@ public class AiController {
     private final AiService aiService;
 
     @PostMapping("/product-description")
-    public CommonResponse<ProductDescriptionResponse> generateProductDescription(
+    public ProductDescriptionResponse generateProductDescription(
             @RequestBody ProductDescriptionRequest request) {
 
         log.info(
@@ -34,6 +33,6 @@ public class AiController {
                         request.getTags());
 
         ProductDescriptionResponse response = new ProductDescriptionResponse(ai.getAnswer());
-        return CommonResponse.onSuccess(200, response);
+        return new ProductDescriptionResponse(ai.getAnswer());
     }
 }

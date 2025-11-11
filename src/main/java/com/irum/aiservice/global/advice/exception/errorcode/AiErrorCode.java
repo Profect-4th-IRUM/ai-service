@@ -1,4 +1,4 @@
-package com.irum.aiservice.global.presentation.advice.exception.errorcode;
+package com.irum.aiservice.global.advice.exception.errorcode;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

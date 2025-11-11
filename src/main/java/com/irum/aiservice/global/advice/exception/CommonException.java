@@ -1,7 +1,7 @@
-package com.irum.aiservice.global.presentation.advice.exception;
+package com.irum.aiservice.global.advice.exception;
 
-import com.irum.aiservice.global.presentation.advice.exception.errorcode.AiErrorCode;
-import com.irum.aiservice.global.presentation.advice.exception.errorcode.BaseErrorCode;
+import com.irum.aiservice.global.advice.exception.errorcode.AiErrorCode;
+import com.irum.aiservice.global.advice.exception.errorcode.BaseErrorCode;
 import lombok.Getter;
 
 @Getter
