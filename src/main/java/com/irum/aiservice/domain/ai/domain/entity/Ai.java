@@ -1,6 +1,5 @@
-package com.irum.come2us.domain.ai.domain.entity;
+package com.irum.aiservice.domain.ai.domain.entity;
 
-import com.irum.come2us.domain.product.domain.entity.Product;
 import jakarta.persistence.*;
 import java.util.UUID;
 import lombok.*;
@@ -29,7 +28,7 @@ public class Ai {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "product_id", nullable = false)
-    private Product product;
+    private UUID productId;
 
     // 연관관계 편의 메서드
     //    public void setProduct(Product product) {
@@ -44,7 +43,7 @@ public class Ai {
     //    }
 
     // 정적 팩토리 매서드
-    public static Ai create(String question, String answer, Product product) {
-        return Ai.builder().question(question).answer(answer).product(product).build();
+    public static Ai create(String question, String answer, UUID product) {
+        return Ai.builder().question(question).answer(answer).productId(product).build();
     }
 }
