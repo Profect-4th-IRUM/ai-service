@@ -33,6 +33,12 @@ public class AiService {
 
         String generatedDescription = aiClient.generateText(prompt);
 
+        String cleanedDescription =
+                generatedDescription
+                        .replace("\n", " ") // 줄바꿈 제거
+                        .replace("\r", " ") // 캐리지리턴 제거 (윈도우 호환)
+                        .trim(); // 앞뒤 공백 제거
+
         Ai aiGeneratedDescription = Ai.create(prompt, generatedDescription, productId);
         return aiRepository.save(aiGeneratedDescription);
     }
@@ -47,7 +53,15 @@ public class AiService {
         if (tags != null && !tags.isBlank()) {
             promptBuilder.append("관련 태그: ").append(tags).append("\n");
         }
-        promptBuilder.append("\n설명은 한국어 작성하고, 3문장 이내 요약된 설명을 작성해주세요.");
+
+        promptBuilder.append(
+                "\n\n출력 규칙:\n"
+                        + "1. 줄바꿈(\\n) 없이 한 문단으로 작성하세요.\n"
+                        + "2. 이모지(🎧, 😊 등)와 특수기호(*, #, -, _)는 사용하지 마세요.\n"
+                        + "3. 마크다운(**bold**, _italic_ 등) 형식은 사용하지 마세요.\n"
+                        + "4. 결과는 JSON 형태로 파싱될 수 있도록 순수 텍스트만 포함하세요.\n"
+                        + "5. 설명은 한국어로 작성하고, 3문장 이내로 요약하세요.");
+
         return promptBuilder.toString();
     }
 }
