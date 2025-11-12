@@ -3,7 +3,6 @@ package com.irum.aiservice.domain.ai.service;
 import com.irum.aiservice.domain.ai.client.AiClient;
 import com.irum.aiservice.domain.ai.domain.entity.Ai;
 import com.irum.aiservice.domain.ai.domain.repository.AiRepository;
-
 import java.util.UUID;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -19,13 +18,15 @@ public class AiService {
     private final AiRepository aiRepository;
     private final AiClient aiClient;
 
-    //    private final ProductFeignClient productFeignClient; // Feign
+    // TODO: 추후 ProductFeignClient 실제 구현 완료되면, 해당 부분과 다른 점 없도록 검토!
+
+    //    private final ProductFeignClient productFeignClient;      // Feign
 
     public Ai generateProductDescription(
             UUID productId, String productName, UUID categoryId, String tags) {
 
-        // TODO: 추후 ProductFeignClient 실제 구현 완료되면, 해당 부분과 다른 점 없도록 검토!
-        String categoryPath = productFeignClient.getCategoryPath(categoryId);
+        //        String categoryPath = productFeignClient.getCategoryPath(categoryId);     // Feign
+        String categoryPath = "임시/카테고리/경로"; // 임시 카테고리 경로 사용
 
         log.info("상품 설명 생성 시작 - productId: {}, categoryPath: {}", productId, categoryPath);
         String prompt = buildDetailedPrompt(productName, categoryPath, tags);

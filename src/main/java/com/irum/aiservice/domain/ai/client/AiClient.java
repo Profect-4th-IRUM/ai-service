@@ -1,9 +1,9 @@
 package com.irum.aiservice.domain.ai.client;
 
 import com.irum.aiservice.domain.ai.dto.*;
-import com.irum.aiservice.global.infrastructure.properties.GeminiApiProperty;
 import com.irum.aiservice.global.advice.exception.CommonException;
 import com.irum.aiservice.global.advice.exception.errorcode.AiErrorCode;
+import com.irum.aiservice.global.infrastructure.properties.GeminiApiProperty;
 import java.util.Optional;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
