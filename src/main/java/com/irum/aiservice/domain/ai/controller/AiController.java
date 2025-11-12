@@ -32,7 +32,6 @@ public class AiController {
                         request.getCategoryId(),
                         request.getTags());
 
-        ProductDescriptionResponse response = new ProductDescriptionResponse(ai.getAnswer());
         return new ProductDescriptionResponse(ai.getAnswer());
     }
 }
