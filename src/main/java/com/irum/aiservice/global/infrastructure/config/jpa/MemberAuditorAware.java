@@ -1,6 +1,6 @@
-package com.irum.come2us.global.infrastructure.config.jpa;
+package com.irum.aiservice.global.infrastructure.config.jpa;
 
-import com.irum.come2us.global.security.MemberDetails;
+import com.irum.aiservice.global.security.MemberDetails;
 import java.util.Optional;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.AuditorAware;

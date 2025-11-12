@@ -1,10 +1,10 @@
-package com.irum.come2us.global.infrastructure.config.security;
+package com.irum.aiservice.global.infrastructure.config.security;
 
-import com.irum.come2us.domain.auth.application.service.JwtTokenService;
-import com.irum.come2us.domain.member.domain.entity.enums.Role;
-import com.irum.come2us.domain.member.domain.repository.MemberRepository;
-import com.irum.come2us.global.security.JwtAuthenticationFilter;
-import com.irum.come2us.global.util.CookieUtil;
+import com.irum.aiservice.domain.auth.application.service.JwtTokenService;
+import com.irum.aiservice.domain.member.domain.entity.enums.Role;
+import com.irum.aiservice.domain.member.domain.repository.MemberRepository;
+import com.irum.aiservice.global.security.JwtAuthenticationFilter;
+import com.irum.aiservice.global.util.CookieUtil;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

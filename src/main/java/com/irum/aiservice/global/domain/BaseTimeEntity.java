@@ -1,4 +1,4 @@
-package com.irum.come2us.global.domain;
+package com.irum.aiservice.global.domain;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.EntityListeners;
