@@ -36,6 +36,8 @@ out/
 ### VS Code ###
 .vscode/
 .env
-
+.DS_Store
+### gradle ###
+gradle.properties
 ### logs ###
 /logs

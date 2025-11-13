@@ -4,9 +4,19 @@ server:
 spring:
   application:
     name: aiservice
+  profiles:
+    active: local
+    include:
+      - redis
+      - eureka
+#  config:
+#    import: optional:configserver:${CONFIG_SERVER_URL:http://localhost:8888}
+
+logback:
+  log-path: ./logs
 
 gemini:
   api:
-    url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent
+    url: ${GEMINI_API_URL}
     key: ${GEMINI_API_KEY}
 

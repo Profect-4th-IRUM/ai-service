@@ -1,7 +1,6 @@
 package com.irum.aiservice.domain.ai.domain.entity;
 
-// import com.irum.come2us.domain.product.domain.entity.Product;
-import com.irum.aiservice.global.domain.BaseEntity;
+import com.irum.global.domain.BaseTimeEntity;
 import jakarta.persistence.*;
 import java.util.UUID;
 import lombok.*;
@@ -15,7 +14,7 @@ import org.hibernate.annotations.Where;
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
 @Builder(access = AccessLevel.PRIVATE)
 @Where(clause = "deleted_at IS NULL")
-public class Ai extends BaseEntity {
+public class Ai extends BaseTimeEntity {
     @Id
     @UuidGenerator(style = UuidGenerator.Style.TIME)
     @Column(name = "ai_id", updatable = false, nullable = false)
@@ -47,9 +46,5 @@ public class Ai extends BaseEntity {
     // 정적 팩토리 매서드
     public static Ai create(String question, String answer, UUID productId) {
         return Ai.builder().question(question).answer(answer).productId(productId).build();
-    }
-
-    public String getAnswer() {
-        return this.answer;
     }
 }
