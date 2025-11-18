@@ -11,26 +11,26 @@ import org.springframework.web.bind.annotation.*;
 @Slf4j
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/ai")
+@RequestMapping("/internal")
 public class AiController {
 
     private final AiService aiService;
 
-    @PostMapping("/product-description")
+    @PostMapping("/product-descriptions")
     public ProductDescriptionResponse generateProductDescription(
             @RequestBody ProductDescriptionRequest request) {
 
         log.info(
-                "[AI 상품설명 요청] productId={}, productName={}",
-                request.getProductId(),
-                request.getProductName());
+                "[AI 상품설명 요청] productName={}, categoryName={}",
+                request.getProductName(),
+                request.getCategoryName());
 
         Ai ai =
                 aiService.generateProductDescription(
-                        request.getProductId(),
                         request.getProductName(),
-                        request.getCategoryId(),
-                        request.getTags());
+                        request.getCategoryName(),
+                        request.getCategoryParents(),
+                        request.getCategoryChildren());
 
         return new ProductDescriptionResponse(ai.getAnswer());
     }
