@@ -1,7 +1,7 @@
 databaseChangeLog:
-        - include:
-        file: changes/001-create-ai-table.yaml
+    - include:
+        file: changes/ddl/001-create-table-ai.yaml
         relativeToChangelogFile: true
-        - include:
-        file: changes/002-insert-default-ais.yaml
+    - include:
+        file: changes/dml/011-insert-default-ai.yaml
         relativeToChangelogFile: true
