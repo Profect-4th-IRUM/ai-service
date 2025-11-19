@@ -37,7 +37,8 @@ out/
 .vscode/
 .env
 .DS_Store
-### gradle ###
 gradle.properties
+liquibase.properties
+
 ### logs ###
 /logs
