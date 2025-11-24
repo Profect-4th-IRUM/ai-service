@@ -1,22 +1,16 @@
-server:
-  port: 8081
-
 spring:
   application:
-    name: aiservice
+    name: ai-service
   profiles:
-    active: local
-    include:
-      - redis
-      - eureka
-#  config:
-#    import: optional:configserver:${CONFIG_SERVER_URL:http://localhost:8888}
+    group:
+      "local": "local, gemini, default-datasource, default-db-management, default-redis, eureka, openfeign, actuator"
+      "docker": "docker, gemini, default-datasource, default-db-management, default-redis, eureka, openfeign, actuator"
+      "prod": "prod, gemini, prod-datasource, prod-db-management, prod-data-redis, eureka, openfeign, actuator"
+      active: "PROFILE_ACTIVE"
+
+    config:
+      import: optional:configserver:${CONFIG_SERVER_URL:http://localhost:8888}
 
 logback:
   log-path: ./logs
-
-gemini:
-  api:
-    url: ${GEMINI_API_URL}
-    key: ${GEMINI_API_KEY}
 

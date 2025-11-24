@@ -1,0 +1,7 @@
+databaseChangeLog:
+    - include:
+        file: changes/ddl/001-create-table-ai.yaml
+        relativeToChangelogFile: true
+    - include:
+        file: changes/dml/011-insert-default-ai.yaml
+        relativeToChangelogFile: true
