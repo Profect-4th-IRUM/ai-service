@@ -1,14 +1,14 @@
 package com.irum.aiservice.domain.ai.dto;
 
-import java.util.UUID;
+import java.util.List;
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter
 @Setter
 public class ProductDescriptionRequest {
-    private UUID productId;
     private String productName;
-    private UUID categoryId;
-    private String tags;
+    private String categoryName;
+    private List<String> categoryParents;
+    private List<String> categoryChildren;
 }
